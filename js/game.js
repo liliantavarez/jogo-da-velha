@@ -3,6 +3,13 @@ let playerTime = 0;
 let symbols = ["o", "x"];
 let gameOver = false;
 
+
+function playGamer(){
+  let homeScreen = document.getElementById('homeScreen')
+  homeScreen.style.display = 'none'
+
+}
+
 function handleMove(position) {
 
   if (gameOver) {
