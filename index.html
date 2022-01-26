@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo da Velha</title>
+    <link rel="shortcut icon"
+        href="https://as2.ftcdn.net/v2/jpg/04/81/33/09/1000_F_481330949_9eR5H4pHA8pEWhldHxiGLvnkDn2AYf1L.jpg"
+        type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -13,8 +16,16 @@
 <body>
 
     <h1>Jogo Da Velha</h1>
-    
+
+    <section id="homeScreen">
+        <div class="inputs">
+            <input type="text" id="player01" value="Jogador 01">
+            <input type="text" id="player02" value="Jogador 02">
+            <input onclick="playGamer()" id="btn-play" type="button" value="Iniciar Jogo">
+        </div>
+        </section>
     <main class="stage">
+
 
         <section>
             <div class="square" id="0"></div>
@@ -34,11 +45,18 @@
             <div class="square" id="8"></div>
         </section>
 
+
+        <section class="resultado" onclick="reset()">
+            <img class="gifs" src="http://1.bp.blogspot.com/-bkjlFsQwGEI/VJ-_16UqZQI/AAAAAAAA_wM/y20ZWP0QcrY/s640/new-year-animations.blogspot.com.gif" alt="">
+            <h1 id="vencedor">Jogador 01 vencedor</h1>
+            <img class="gifs" src="http://1.bp.blogspot.com/-bkjlFsQwGEI/VJ-_16UqZQI/AAAAAAAA_wM/y20ZWP0QcrY/s640/new-year-animations.blogspot.com.gif" alt="">
+        </section>
+
     </main>
 
     <script defer src="./js/game.js"></script>
     <script defer src="./js/interface.js"></script>
-    
+
 </body>
 
 </html>
