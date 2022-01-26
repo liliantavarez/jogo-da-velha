@@ -1,12 +1,13 @@
 body {
     text-align: center;
+    position: relative;
 }
 
-h1{
+h1 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.square{
+.square {
     width: 100px;
     height: 100px;
     background-color: beige;
@@ -15,11 +16,11 @@ h1{
     display: inline-block;
 }
 
-.o{
+.o {
     position: relative;
 }
 
-.o::after{
+.o::after {
     content: '\274C';
     position: absolute;
     font-size: 50px;
@@ -30,11 +31,11 @@ h1{
     left: 0;
 }
 
-.x{
-position: relative;
+.x {
+    position: relative;
 }
 
-.x::after{
+.x::after {
     content: '\2B55';
     position: absolute;
     font-size: 50px;
@@ -43,4 +44,53 @@ position: relative;
     bottom: 0;
     right: 0;
     left: 0;
+}
+
+#homeScreen {
+    position: absolute;
+    border: 1px solid beige;
+    right: 0;
+    left: 0;
+    margin: auto;
+    opacity: 0.9;
+    background-color: antiquewhite;
+    width: 250px;
+    height: 313px;
+}
+
+.inputs {
+    margin-top: 50%;
+}
+
+#player01,
+#player02 {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+#btn-play {
+    margin-top: 20px;
+    width: 150px;
+
+}
+
+.resultado {
+    top: 140px;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    background-color:antiquewhite;
+    width: 310px;
+    opacity: 0.9;
+    height: 200px;
+    cursor: pointer;
+}
+
+.gifs{
+    width: 80px;
+    height: 80px;
 }
