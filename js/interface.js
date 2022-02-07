@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function handleClick(event) {
   let square = event.target;
   let position = square.id;
+  
 
   if (handleMove(position)) {
     setTimeout(() => {
@@ -17,18 +18,18 @@ function handleClick(event) {
       let vencedor = document.getElementById("vencedor");
       let resultado = document.getElementsByClassName("resultado")[0];
       resultado.style.display = "flex";
-
+      
       if (playerTime == 0) {
         vencedor.innerHTML = `${playerName1} Venceu!`;
-      } else if (board[8] != "") {
-        console.log("empate");
-        vencedor.innerHTML = `EMPATE!`;
       } else {
         vencedor.innerHTML = `${playerName2} venceu!`;
       }
     }, 10);
-  }
+  }else{
+   
 
+  }
+  
   updateSquare();
 }
 
@@ -46,5 +47,5 @@ function updateSquare() {
 }
 
 function reset() {
-  location.reload()
+  location.reload();
 }

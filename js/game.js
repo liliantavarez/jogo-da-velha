@@ -2,24 +2,23 @@ let board = ["", "", "", "", "", "", "", "", ""];
 let playerTime = 0;
 let symbols = ["o", "x"];
 let gameOver = false;
-
-
-function playGamer(){
-  let homeScreen = document.getElementById('homeScreen')
-  homeScreen.style.display = 'none'
-
+let empate = false
+function playGamer() {
+  let homeScreen = document.getElementById("homeScreen");
+  homeScreen.style.display = "none";
 }
 
 function handleMove(position) {
-
   if (gameOver) {
     return;
   }
-
+  
   if (board[position] == "") {
     board[position] = symbols[playerTime];
-
+    
     gameOver = isWin();
+    empate = checkForDraw()
+    console.log(empate)
 
     if (gameOver == false) {
       if (playerTime == 0) {
@@ -33,7 +32,6 @@ function handleMove(position) {
 }
 
 function isWin() {
-    
   let winStates = [
     [0, 1, 2],
     [3, 4, 5],
@@ -61,3 +59,4 @@ function isWin() {
   }
   return false;
 }
+
